@@ -39,7 +39,7 @@ export const getOrders = (status:string)=> API.get(`orders?status=${status}`);
 
 // auth
 export const login = (data : LOGIN)=> {
-        axios.get('http://localhost:8000/sanctum/csrf-cookie')
+        axios.get('https://fastfoodtest.herokuapp.com/sanctum/csrf-cookie')
         return API.post(`login`,data)
 };
 export const register = (data : REGISTER)=> API.post(`register`,data);
